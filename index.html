@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=document.getElementById('inc');
+        function increment() {
+            if((i<10) && (i>0) ){
+                i = parseInt(document.getElementById("inc").value);
+                i++;
+                document.getElementById('inc').value = i;
+            }
+            else{
+                document.getElementById("1").disabled = true;
+            }
+        }
+        function decrement() {
+            i = parseInt(document.getElementById("inc").value);
+            if(i>0){
+                i--;
+                document.getElementById('inc').value = i;
+            }
+            else{
+                document.getElementById("2").disabled = true;
+            }
+        }  
+    </script>
+    <button id="1" onclick="increment();">Increment</button>
+    <input type="text" id="inc" value="0"></input>
+    <button id="2" onclick="decrement();">Decrement</button>
+</body>
+</html>
